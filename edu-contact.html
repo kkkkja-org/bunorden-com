@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Bunorden</title>
+    <title>Inquire — Bunorden for Education</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <nav class="proton-nav">
         <div class="nav-content">
             <div class="nav-left">
@@ -74,7 +74,7 @@
                                 </section>
                             </nav>
                             <aside class="mega-side">
-                                <a href="contact.html" class="mega-item">
+                                <a href="edu-contact.html" class="mega-item">
                                     <div class="icon-wrap"
                                         style="background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -92,32 +92,37 @@
                             </aside>
                         </div>
                     </li>
-                    <li><a href="contact.html" class="nav-link">Bunorden for Education</a></li>
-                    <li class="has-dropdown dropdown-trigger">Who we are <span class="chevron"></span>
+                    <li><a href="edu-contact.html" class="nav-link">Bunorden for Education</a></li>
+                    <li class="has-dropdown dropdown-trigger"><a href="about.html">Who we are</a> <span
+                            class="chevron"></span>
                         <div class="dropdown-menu">
                             <div class="dropdown-column left-col">
-                                <div class="dropdown-item">
-                                    <h4>About us</h4>
-                                    <p>Bunorden stands for privacy. Always has, always will.</p>
-                                </div>
+                                <a href="about.html" class="dropdown-item-link">
+                                    <div class="dropdown-item">
+                                        <h4>About us</h4>
+                                        <p>Bunorden stands for privacy. Always has, always will.</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="dropdown-column right-col">
-                                <div class="dropdown-item">
-                                    <div class="icon-wrap">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                                        </svg>
+                                <a href="privacy.html" class="dropdown-item-link">
+                                    <div class="dropdown-item">
+                                        <div class="icon-wrap">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4>Privacy First</h4>
+                                            <p>Our commitment to your data and security.</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4>Open source</h4>
-                                        <p>Everyone is welcome to inspect our code. We're open.</p>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </li>
-                    <li class="has-dropdown">Resources and support <span class="chevron"></span></li>
                 </ul>
             </div>
         </div>
@@ -125,11 +130,48 @@
 
     <main class="container">
         <header class="hero">
-            <h1>Contact our Administrator</h1>
-            <p class="subtitle">Contact our Administrator for more details.</p>
-            <p>If you have inquiries about Bunorden for Education, email us at <a
-                    href="mailto:contact@bunorden.com">contact@bunorden.com</a>.</p>
+            <h1>Bunorden for Education</h1>
+            <p class="subtitle">Bring elegant, privacy-first tools to your classroom or institution.</p>
         </header>
+
+        <section class="form-container">
+            <form action="#" method="POST" class="inquiry-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="school">School/Institution Name</label>
+                        <input type="text" id="school" name="school" placeholder="Enter school name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="admin">Administrator</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="functions">Requested Functions & Feedback</label>
+                    <textarea id="functions" name="functions" rows="5"
+                        placeholder="Tell us what tools or features you need..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">Send Inquiry</button>
+            </form>
+        </section>
 
         <footer class="minimal-footer">
             <p>By a Hong Kong Secondary Student</p>
@@ -142,6 +184,42 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelector('.inquiry-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const school = document.getElementById('school').value;
+            const role = document.getElementById('role').value;
+            const functions = document.getElementById('functions').value;
+
+            const subject = encodeURIComponent(`Education Inquiry from ${name} (${school})`);
+            const body = encodeURIComponent(
+                `Full Name: ${name}\r\n` +
+                `Email Address: ${email}\r\n` +
+                `School/Institution: ${school}\r\n` +
+                `Role: ${role}\r\n\r\n` +
+                `Requested Functions & Feedback:\r\n${functions}`
+            );
+
+            // Open user's email client
+            window.location.href = `mailto:contact@bunorden.com?subject=${subject}&body=${body}`;
+
+            // Subtle feedback
+            const btn = document.querySelector('.submit-btn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Opening Email Client...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.opacity = '1';
+                btn.disabled = false;
+            }, 3000);
+        });
+    </script>
 </body>
 
 </html>
