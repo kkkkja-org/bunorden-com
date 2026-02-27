@@ -4,212 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquire — Bunorden for Education</title>
+    <title>Contact — Bunorden Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="proton-nav">
-        <div class="nav-content">
-            <div class="nav-left">
-                <a href="index.html" class="logo-container">
-                    <img src="/assets/logo.png" alt="Bunorden" class="nav-logo">
-                </a>
-                <ul class="nav-menu">
-                    <li class="has-dropdown dropdown-trigger">Products <span class="chevron"></span>
-                        <div class="dropdown-menu mega-menu">
-                            <nav class="mega-content">
-                                <section class="mega-section">
-                                    <div class="mega-header">
-                                        <h4>Academic</h4>
-                                    </div>
-                                    <div class="mega-grid">
-                                        <a href="https://chin.bunorden.com" class="mega-item">
-                                            <div class="icon-wrap chin-icon">中</div>
-                                            <div>
-                                                <h5>Chinese</h5>
-                                                <p>Essential literature and language resources.</p>
-                                            </div>
-                                        </a>
-                                        <a href="https://phy.bunorden.com" class="mega-item">
-                                            <div class="icon-wrap phy-icon">Phy</div>
-                                            <div>
-                                                <h5>Physics</h5>
-                                                <p>Master mechanics and energy concepts.</p>
-                                            </div>
-                                        </a>
-                                        <a href="https://ict.bunorden.com" class="mega-item">
-                                            <div class="icon-wrap ict-icon">ICT</div>
-                                            <div>
-                                                <h5>Technology</h5>
-                                                <p>Information and communication tools.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </section>
+    <header>
+        <div class="nav-container">
+            <a href="https://bunorden.com/index.html" class="logo-section">
+                <img src="assets/logo.png" alt="Bunorden logo">
+            </a>
 
-                                <div class="mega-separator"></div>
+            <nav>
+                <div class="nav-item has-dropdown">
+                    <span>Products</span>
+                    <div class="dropdown-menu">
+                        <a href="https://phy.bunorden.com" class="dropdown-item" target="_blank">MKP Physics</a>
+                        <a href="https://ict.bunorden.com" class="dropdown-item" target="_blank">ICT</a>
+                        <a href="https://bunorden.com/dsepp" class="dropdown-item" target="_blank">DSE Past Paper</a>
+                        <a href="https://ls.bunorden.com" class="dropdown-item" target="_blank">Timetable</a>
+                        <a href="https://net.bunorden.com" class="dropdown-item" target="_blank">Network Tools</a>
+                    </div>
+                </div>
+                <a href="edu-contact.html" class="nav-item">Support</a>
+            </nav>
 
-                                <section class="mega-section">
-                                    <div class="mega-header">
-                                        <h4>More from Bunorden</h4>
-                                    </div>
-                                    <div class="mega-footer-section">
-                                        <a href="https://ls.bunorden.com" class="mega-item">
-                                            <div class="icon-wrap ls-icon">📅</div>
-                                            <div>
-                                                <h5>Timetable</h5>
-                                                <p>Your schedule, redesigned.</p>
-                                            </div>
-                                        </a>
-                                        <a href="https://net.bunorden.com" class="mega-item">
-                                            <div class="icon-wrap net-icon">Net</div>
-                                            <div>
-                                                <h5>Network</h5>
-                                                <p>Advanced diagnostic tools.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </section>
-                            </nav>
-                            <aside class="mega-side">
-                                <a href="edu-contact.html" class="mega-item">
-                                    <div class="icon-wrap"
-                                        style="background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path
-                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h5>Bunorden for Education</h5>
-                                        <p>Empowering schools and students.</p>
-                                    </div>
-                                </a>
-                            </aside>
-                        </div>
-                    </li>
-                    <li><a href="edu-contact.html" class="nav-link">Bunorden for Education</a></li>
-                    <li class="has-dropdown dropdown-trigger"><a href="about.html">Who we are</a> <span
-                            class="chevron"></span>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-column left-col">
-                                <a href="about.html" class="dropdown-item-link">
-                                    <div class="dropdown-item">
-                                        <h4>About us</h4>
-                                        <p>Bunorden stands for privacy. Always has, always will.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="dropdown-column right-col">
-                                <a href="privacy.html" class="dropdown-item-link">
-                                    <div class="dropdown-item">
-                                        <div class="icon-wrap">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2">
-                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h4>Privacy First</h4>
-                                            <p>Our commitment to your data and security.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="header-right">
+                <a href="privacy.html" class="nav-item">Privacy</a>
+                <a href="terms.html" class="nav-item">Terms</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <main class="container">
-        <header class="hero">
-            <h1>Bunorden for Education</h1>
-            <p class="subtitle">Bring elegant, privacy-first tools to your classroom or institution.</p>
-        </header>
+    <main>
+        <section class="page-header">
+            <h1>Contact support</h1>
+            <p class="subtitle">Need help or want to share feedback? Reach out directly to Bunorden.</p>
+            <p>Fill in the form below and your email client will open with the details pre-filled to
+                <strong>contact@bunorden.com</strong>.</p>
+        </section>
 
         <section class="form-container">
-            <form action="#" method="POST" class="inquiry-form">
+            <form action="#" method="POST" class="inquiry-form" id="supportForm">
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="school">School/Institution Name</label>
-                        <input type="text" id="school" name="school" placeholder="Enter school name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="role">Your Role</label>
-                        <select id="role" name="role" required>
-                            <option value="" disabled selected>Select your role</option>
-                            <option value="student">Student</option>
-                            <option value="teacher">Teacher</option>
-                            <option value="admin">Administrator</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="functions">Requested Functions & Feedback</label>
-                    <textarea id="functions" name="functions" rows="5"
-                        placeholder="Tell us what tools or features you need..." required></textarea>
+                    <label for="message">Contents</label>
+                    <textarea id="message" name="message" rows="6"
+                        placeholder="Describe your issue, question, or feedback..." required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary submit-btn">Send Inquiry</button>
+                <button type="submit" class="submit-btn">Send email to contact@bunorden.com</button>
             </form>
         </section>
-
-        <footer class="minimal-footer">
-            <p>By a Hong Kong Secondary Student</p>
-            <div class="dot-separator"></div>
-            <p>Absolute Privacy • People Everywhere Welcome</p>
-            <div class="legal">
-                <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Usage</a>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <div class="footer-branding">
+            <span>By a Hong Kong Secondary Student</span>
+        </div>
+        <p class="footer-tagline">Absolute Privacy • People Everywhere Welcome</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Usage</a>
+            <a href="edu-contact.html">Support</a>
+        </div>
+        <p>&copy; 2026 bunorden.com. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
     <script>
-        document.querySelector('.inquiry-form').addEventListener('submit', function (e) {
+        document.getElementById('supportForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const school = document.getElementById('school').value;
-            const role = document.getElementById('role').value;
-            const functions = document.getElementById('functions').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
 
-            const subject = encodeURIComponent(`Education Inquiry from ${name} (${school})`);
+            const subject = encodeURIComponent(`Support request from ${name}`);
             const body = encodeURIComponent(
-                `Full Name: ${name}\r\n` +
-                `Email Address: ${email}\r\n` +
-                `School/Institution: ${school}\r\n` +
-                `Role: ${role}\r\n\r\n` +
-                `Requested Functions & Feedback:\r\n${functions}`
+                `Name: ${name}\r\n` +
+                `Email: ${email}\r\n\r\n` +
+                `Contents:\r\n${message}`
             );
 
-            // Open user's email client
             window.location.href = `mailto:contact@bunorden.com?subject=${subject}&body=${body}`;
 
-            // Subtle feedback
             const btn = document.querySelector('.submit-btn');
             const originalText = btn.textContent;
-            btn.textContent = 'Opening Email Client...';
+            btn.textContent = 'Opening your email client...';
             btn.style.opacity = '0.7';
             btn.disabled = true;
 

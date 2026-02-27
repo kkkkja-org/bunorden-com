@@ -2,28 +2,50 @@ function filterBrand(category, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
-    const cards = document.querySelectorAll('.card');
+    const cards = Array.from(document.querySelectorAll('.card'));
+
+    // First, fade out cards that shouldn't be shown
     cards.forEach(card => {
         const cardCat = card.getAttribute('data-cat');
+        const shouldShow = category === 'all' || cardCat === category;
 
-        // Clear any pending hide timeouts so rapid clicks don't conflict
-        if (card._hideTimeout) {
-            clearTimeout(card._hideTimeout);
-            card._hideTimeout = null;
-        }
-
-        if (category === 'all' || cardCat === category) {
-            // Show card (use default display); animate opacity via CSS transition
-            card.style.display = '';
-            requestAnimationFrame(() => { card.style.opacity = '1'; });
-        } else {
-            // Fade out then hide after transition completes
+        if (!shouldShow) {
+            if (card._hideTimeout) {
+                clearTimeout(card._hideTimeout);
+                card._hideTimeout = null;
+            }
             card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
             card._hideTimeout = setTimeout(() => {
                 card.style.display = 'none';
                 card._hideTimeout = null;
             }, 300);
         }
+    });
+
+    // Then, stagger in the cards that should be shown
+    let showIndex = 0;
+    cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat');
+        const shouldShow = category === 'all' || cardCat === category;
+        if (!shouldShow) return;
+
+        if (card._hideTimeout) {
+            clearTimeout(card._hideTimeout);
+            card._hideTimeout = null;
+        }
+
+        // Reset display and prepare for fade-in
+        card.style.display = '';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(10px)';
+
+        const delay = showIndex * 60; // 60ms stagger
+        showIndex += 1;
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, delay);
     });
 }
 
