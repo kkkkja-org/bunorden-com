@@ -1,53 +1,59 @@
-function filterBrand(category, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+/**
+ * Bunorden.com - Main Script
+ * Handles filter bar functionality and generic interactions
+ */
 
-    const cards = Array.from(document.querySelectorAll('.card'));
+// ── Filter Bar Functionality ──
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card');
 
-    // First, fade out cards that shouldn't be shown
-    cards.forEach(card => {
-        const cardCat = card.getAttribute('data-cat');
-        const shouldShow = category === 'all' || cardCat === category;
+  if (filterButtons.length === 0) return; // No filter buttons on this page
 
-        if (!shouldShow) {
-            if (card._hideTimeout) {
-                clearTimeout(card._hideTimeout);
-                card._hideTimeout = null;
-            }
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(10px)';
-            card._hideTimeout = setTimeout(() => {
-                card.style.display = 'none';
-                card._hideTimeout = null;
-            }, 300);
-        }
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      handleFilter(filter, this);
     });
+  });
 
-    // Then, stagger in the cards that should be shown
-    let showIndex = 0;
+  function handleFilter(category, buttonElement) {
+    // Update active state
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    buttonElement.classList.add('active');
+
+    // Filter cards
     cards.forEach(card => {
-        const cardCat = card.getAttribute('data-cat');
-        const shouldShow = category === 'all' || cardCat === category;
-        if (!shouldShow) return;
+      const cardCategory = card.getAttribute('data-cat');
+      const shouldShow = category === 'all' || cardCategory === category;
 
-        if (card._hideTimeout) {
-            clearTimeout(card._hideTimeout);
-            card._hideTimeout = null;
-        }
-
-        // Reset display and prepare for fade-in
-        card.style.display = '';
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(10px)';
-
-        const delay = showIndex * 60; // 60ms stagger
-        showIndex += 1;
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, delay);
+      if (shouldShow) {
+        card.classList.remove('hidden-card');
+        card.classList.add('visible-card');
+      } else {
+        card.classList.remove('visible-card');
+        card.classList.add('hidden-card');
+      }
     });
-}
+  }
+});
+
+// ── Smooth Scroll for Hash Links ──
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
 
 // Fade in cards on initial load (staggered)
 window.addEventListener('load', () => {
