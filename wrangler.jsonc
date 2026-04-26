@@ -1,7 +1,7 @@
 {
   "name": "bunorden-com",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2026-04-26",
+  "compatibility_date": "2024-11-01",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": ".open-next/assets",
@@ -9,17 +9,6 @@
   },
   "observability": {
     "enabled": true
-  },
-  "r2_buckets": [
-    {
-      "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "bunordencom-opennext-cache"
-    }
-  ],
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "bunorden-com"
-    }
-  ]
+  }
 }
+

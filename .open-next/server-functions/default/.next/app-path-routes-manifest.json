@@ -1,8 +1,8 @@
 {
-  "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/clavi/page": "/clavi",
+  "/_global-error/page": "/_global-error",
   "/favicon.ico/route": "/favicon.ico",
+  "/clavi/page": "/clavi",
   "/noted/page": "/noted",
   "/page": "/",
   "/privacy/page": "/privacy",
