@@ -83,7 +83,10 @@ export default function RootLayout({
               <a href="/terms">Terms of Service</a>
               <a href="https://github.com/kkkkja-org">GitHub</a>
             </div>
-            <p style={{ fontSize: "12px" }}>© 2026 Bunorden. Dedicated to your privacy.</p>
+            <p style={{ fontSize: "12px", marginBottom: "8px" }}>© 2026 Bunorden. Dedicated to your privacy.</p>
+            <p style={{ fontSize: "11px", opacity: 0.5 }}>
+              Hosted by Cloudflare Workers. May contain <code>static.cloudflareinsights.com</code> for performance monitoring.
+            </p>
           </div>
         </footer>
       </body>

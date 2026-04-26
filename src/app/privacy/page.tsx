@@ -25,14 +25,21 @@ export default function PrivacyPolicy() {
       </section>
 
       <section style={{ marginBottom: "40px" }}>
-        <h2 style={{ fontSize: "24px", marginBottom: "16px" }}>3. Your Rights</h2>
+        <h2 style={{ fontSize: "24px", marginBottom: "16px" }}>3. Infrastructure & Hosting</h2>
+        <p style={{ color: "var(--secondary-fg)", marginBottom: "16px" }}>
+          Bunorden products are hosted using <strong>Cloudflare Workers</strong>. As part of this infrastructure, our websites may include <code>static.cloudflareinsights.com</code> for privacy-first, non-identifying performance monitoring provided by Cloudflare. This helps us ensure the reliability of our services without tracking individual users.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: "40px" }}>
+        <h2 style={{ fontSize: "24px", marginBottom: "16px" }}>4. Your Rights</h2>
         <p style={{ color: "var(--secondary-fg)", marginBottom: "16px" }}>
           You have full control over your data. You can export or delete your account at any time through our centralized account management at accounts.bunorden.com.
         </p>
       </section>
 
       <section style={{ marginBottom: "64px" }}>
-        <h2 style={{ fontSize: "24px", marginBottom: "16px" }}>4. Contact Us</h2>
+        <h2 style={{ fontSize: "24px", marginBottom: "16px" }}>5. Contact Us</h2>
         <p style={{ color: "var(--secondary-fg)" }}>
           If you have questions about our privacy practices, please reach out via GitHub or our official channels.
         </p>
