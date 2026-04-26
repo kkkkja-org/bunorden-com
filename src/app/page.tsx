@@ -57,29 +57,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{
-        padding: "100px 80px",
-        borderRadius: "48px",
-        textAlign: "center",
-        marginTop: "60px",
-        background: "radial-gradient(circle at top right, rgba(175, 82, 222, 0.1), transparent 70%)",
-        border: "1px solid var(--glass-border)",
-        position: "relative",
-        overflow: "hidden"
-      }}>
-        <h2 style={{ fontSize: "48px", marginBottom: "24px", fontWeight: 600 }}>Privacy by Design.</h2>
+      <section className="section-premium animate-fade-in">
+        <h2 style={{ fontSize: "56px", marginBottom: "24px", fontWeight: 600, letterSpacing: "-0.04em" }}>Privacy by Design.</h2>
         <p style={{ 
-          fontSize: "22px", 
+          fontSize: "24px", 
           color: "var(--secondary-fg)", 
           maxWidth: "850px", 
-          margin: "0 auto 48px",
+          margin: "0 auto 56px",
           lineHeight: 1.5
         }}>
           Bunorden is dedicated to building products where you own the keys. 
-          No middle-men. No data harvesting. Just tools for your life.
+          No middle-men. No data harvesting. Just sophisticated tools for your digital life.
         </p>
-        <a href="https://accounts.bunorden.com/signup" className="btn btn-primary" style={{ padding: "18px 48px", fontSize: "18px" }}>
-          Join Bunorden
+        <a href="https://accounts.bunorden.com/signup" className="btn btn-primary" style={{ padding: "20px 64px", fontSize: "18px" }}>
+          Join the Ecosystem
         </a>
       </section>
     </div>

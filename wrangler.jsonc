@@ -1,6 +1,5 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "bunordencom",
+  "name": "bunorden-com",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-04-26",
   "compatibility_flags": ["nodejs_compat"],
@@ -20,7 +19,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "bunordencom"
+      "service": "bunorden-com"
     }
   ]
 }
